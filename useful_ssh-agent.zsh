@@ -6,7 +6,7 @@ function useful_ssh_agent() {
 }
 
 function check_ssh-agent_and_execute() {
-    if [ ! -e $(readlink ~/.ssh/ssh_sock) ]; then
+    if [[ ! -e $(readlink ~/.ssh/ssh_sock) ]]; then
         useful_ssh_agent
         $USEFUL_SSHAGENT_SSHADD_COMMAND
     fi
